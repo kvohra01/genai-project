@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 import os
 
-OUTPUT_DIR = "processed_animals_256"
+OUTPUT_DIR = "processed_fish_256"
 
 def preprocess_example(example):
     img = example["image"].convert("RGB")
@@ -15,7 +15,7 @@ def preprocess_example(example):
     return example
 
 if __name__ == "__main__":
-    dataset = load_dataset("lucabaggi/animal-wildlife")
+    dataset = load_dataset("markdaniellampa/fish-dataset")
 
     # Combine all splits into one dataset for diffusion training
     if isinstance(dataset, dict):
